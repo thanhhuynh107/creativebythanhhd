@@ -1,0 +1,501 @@
+@charset "utf-8";
+/* CSS Document */
+*{ scroll-behavior: smooth}
+
+/* Background tràn màn hình */
+        .background {
+            background-image: url('https://via.placeholder.com/1920x1080'); /* Thay đổi đường dẫn đến hình ảnh của bạn */
+            background-size: cover; /* Đảm bảo hình ảnh phủ đầy */
+            background-position: center; /* Căn giữa hình ảnh */
+            height: 100vh; /* Chiều cao 100% màn hình */
+            position: relative; /* Để có thể đặt menu lên trên */
+        }
+/* Navbar chính */
+.navbar {
+    background-color: #D8CFBC; /* Màu nền trong suốt */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    padding: 15px 30px; /* Padding cho navbar */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu */
+}
+
+/* Liên kết trong navbar */
+.navbar-nav .nav-link {
+    color: #565449; /* Màu chữ cho liên kết */
+    font-size: 1rem; /* Kích thước chữ */
+    padding: 10px 15px; /* Padding cho liên kết */
+    transition: color 0.3s; /* Hiệu ứng chuyển màu chữ */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FFFBF4; /* Màu chữ khi hover */
+}
+
+/* Logo trong navbar */
+.navbar-brand {
+    font-size: 1.5rem; /* Kích thước chữ cho logo */
+    color: #565449; /* Màu chữ cho logo */
+    font-weight: bold; /* Đậm */
+}
+
+.navbar-brand:hover {
+    color: #FFFBF4; /* Màu chữ khi hover */
+}
+
+/* Nút bấm cho navbar */
+.navbar-toggler {
+    border: none; /* Không viền */
+}
+
+.navbar-toggler-icon {
+    background-color: #FFFBF4; /* Màu cho biểu tượng nút bấm */
+}
+
+/* Định dạng cho navbar khi cuộn */
+.navbar.scrolled {
+    background-color: #D8CFBC; /* Màu nền khi cuộn */
+}
+
+section { 
+	min-height: 90vh;
+	padding-top: 150px
+}
+.timeline {
+    list-style: none;
+    padding: 60px 60px;
+    position: relative;
+}
+
+    .timeline:before {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 3px;
+        background-color: #eeeeee;
+        left: 50%;
+        margin-left: -1.5px;
+    }
+
+    .timeline > li {
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li > .timeline-panel {
+            width: 46%;
+            float: left;
+            border: 1px solid #d4d4d4;
+            border-radius: 2px;
+            padding: 20px;
+            position: relative;
+            -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        }
+
+            .timeline > li > .timeline-panel:before {
+                position: absolute;
+                top: 26px;
+                right: -15px;
+                display: inline-block;
+                border-top: 15px solid transparent;
+                border-left: 15px solid #ccc;
+                border-right: 0 solid #ccc;
+                border-bottom: 15px solid transparent;
+                content: " ";
+            }
+
+            .timeline > li > .timeline-panel:after {
+                position: absolute;
+                top: 27px;
+                right: -14px;
+                display: inline-block;
+                border-top: 14px solid transparent;
+                border-left: 14px solid #fff;
+                border-right: 0 solid #fff;
+                border-bottom: 14px solid transparent;
+                content: " ";
+            }
+
+        .timeline > li > .timeline-badge {
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.4em;
+            text-align: center;
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            margin-left: -25px;
+            background-color: #999999;
+            z-index: 100;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+
+        .timeline > li.timeline-inverted > .timeline-panel {
+            float: right;
+        }
+
+            .timeline > li.timeline-inverted > .timeline-panel:before {
+                border-left-width: 0;
+                border-right-width: 15px;
+                left: -15px;
+                right: auto;
+            }
+
+            .timeline > li.timeline-inverted > .timeline-panel:after {
+                border-left-width: 0;
+                border-right-width: 14px;
+                left: -14px;
+                right: auto;
+            }
+
+.timeline-badge.primary {
+    background-color: #2e6da4 !important;
+}
+
+.timeline-badge.success {
+    background-color: #3f903f !important;
+}
+
+.timeline-badge.warning {
+    background-color: #f0ad4e !important;
+}
+
+.timeline-badge.danger {
+    background-color: #D8CFBC !important;
+}
+
+.timeline-badge.info {
+    background-color: #5bc0de !important;
+}
+
+.timeline-title {
+    margin-top: 0;
+    color: inherit;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+    margin-bottom: 0;
+}
+
+    .timeline-body > p + p {
+        margin-top: 5px;
+    }
+
+@media (max-width: 767px) {
+    ul.timeline:before {
+        left: 40px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+
+    ul.timeline > li > .timeline-badge {
+        left: 15px;
+        margin-left: 0;
+        top: 16px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+
+        ul.timeline > li > .timeline-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+
+        ul.timeline > li > .timeline-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
+}
+
+
+.progress {
+    background-color: #e0e0e0; /* Màu nền của progress bar */
+    border-radius: 5px; /* Bo góc cho progress bar */
+    height: 30px; /* Chiều cao của progress bar */
+    width: 100%; /* Chiều rộng của progress bar */
+}
+
+.progress-bar {
+    background-color: #11120D; /* Màu của thanh tiến trình */
+    height: 100%; /* Đảm bảo thanh tiến trình chiếm toàn bộ chiều cao của progress container */
+    border-radius: 5px; /* Bo góc cho thanh tiến trình */
+    transition: width 0.4s ease; /* Thêm hiệu ứng chuyển động khi thay đổi chiều rộng */
+}
+
+
+#tes .avatar
+{
+	width: 100px; 
+	height: 100px;
+	border-radius: 50%;
+	border: 4px solid pink;
+	display: block; margin: auto; 
+	margin-bottom: 50px
+}
+
+body {
+    font-family: "Poppins", sans-serif; /* Thay đổi font chữ chính */
+    color: #565449; /* Màu chữ chính */
+    line-height: 1.6; /* Khoảng cách giữa các dòng */
+}
+
+/* Tiêu đề chính */
+h0 {
+	font-family: "Poppins", sans-serif;
+    font-size: 3.5rem; /* Kích thước chữ cho h1 */
+    color: #565449; /* Màu chữ cho h1 */
+    font-weight: bold; /* Đậm */
+}
+
+/* Tiêu đề chính */
+h1 {
+	font-family: "Poppins", sans-serif;
+    font-size: 2.5rem; /* Kích thước chữ cho h1 */
+    color: #565449; /* Màu chữ cho h1 */
+    font-weight: bold; /* Đậm */
+}
+
+/* Tiêu đề phụ */
+h2 {
+	font-family: "Poppins", sans-serif;
+    font-size: 2rem; /* Kích thước chữ cho h2 */
+    color: #D8CFBC; /* Màu chữ cho h2 */
+    font-weight: bold; /* Đậm */
+}
+
+/* Tiêu đề cấp 3 */
+h3 {
+	font-family: "Poppins", sans-serif;
+    font-size: 1.5rem; /* Kích thước chữ cho h3 */
+    color: #FFFBF4; /* Màu chữ cho h3 */
+    font-weight: bold; /* Thường */
+}
+
+/* Tiêu đề cấp 4 */
+h4 {
+	font-family: "Poppins", sans-serif;
+    font-size: 1rem; /* Kích thước chữ cho h3 */
+    color: #FFFBF4; /* Màu chữ cho h3 */
+    font-weight: bold; /* Thường */
+}
+
+/* Tiêu đề cấp 5 */
+h5 {
+	font-family: "Poppins", sans-serif;
+    font-size: 1rem; /* Kích thước chữ cho h3 */
+    color: #565449; /* Màu chữ cho h3 */
+    font-weight: bold; /* Thường */
+}
+
+/* Tiêu đề cấp 3 */
+h6 {
+	font-family: "Poppins", sans-serif;
+    font-size: 1.5rem; /* Kích thước chữ cho h3 */
+    color: #565449; /* Màu chữ cho h3 */
+    font-weight: bold; /* Thường */
+}
+
+/* Đoạn văn bản */
+p {
+    font-size: 1rem; /* Kích thước chữ cho đoạn văn */
+    color: #565449; /* Màu chữ cho đoạn văn */
+}
+
+/* Liên kết */
+a {
+    color: #565449; /* Màu chữ cho liên kết */
+    text-decoration: none; /* Bỏ gạch dưới */
+}
+
+a:hover {
+    text-decoration: none; /* Gạch dưới khi hover */
+	color: #d8cfbc;
+}
+
+/* Nút bấm */
+.btn {
+    font-size: 1rem; /* Kích thước chữ cho nút */
+    color: #565449; /* Màu chữ cho nút */
+    background-color: #FFFBF4; /* Màu nền cho nút */
+    padding: 10px 20px; /* Padding cho nút */
+    border: none; /* Không viền */
+    border-radius: 100px; /* Bo góc */
+}
+
+.btn:hover {
+    background-color: #565449; /* Màu nền khi hover */
+}
+
+.div-custom {
+    background-color: #565449; /* Màu nền của section */
+    color: #D8CFBC; /* Màu chữ trong section */
+	align-items: center;
+    padding: 60px 20px; /* Padding trên và dưới là 60px, trái và phải là 20px */
+}
+
+.full-screen-section {
+	width: 100%;
+    height: 100vh; /* Chiều cao bằng 100% chiều cao màn hình */
+    background-color: #f8f9fa; /* Màu nền */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    text-align: center; /* Căn giữa văn bản */
+    padding: 0px; /* Padding nội dung */
+    color: #333; /* Màu chữ */
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animated-icon {
+    animation: pulse 1s ease-in-out forwards; /* Chạy một lần */
+}
+
+.icon-custom {
+    color: #565449; /* Màu sắc biểu tượng */
+    margin: 0px; /* Khoảng cách giữa các biểu tượng */
+    transition: color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.icon-custom:hover {
+    color: #D8CFBC; /* Thay đổi màu khi hover */
+}
+
+.icon-footer-custom {
+    color: #FFFBF4; /* Màu sắc biểu tượng */
+    margin: 0px; /* Khoảng cách giữa các biểu tượng */
+    transition: color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.icon-footer-custom:hover {
+    color: #11120D; /* Thay đổi màu khi hover */
+}
+
+#projectCarousel {
+    max-height: 500px; /* Đặt chiều cao tối đa cho carousel */
+    overflow: hidden;  /* Ẩn phần nội dung vượt quá */
+}
+
+#projectCarousel .carousel-item {
+    height: 100%; /* Đặt chiều cao của từng item */
+}
+
+#projectCarousel img {
+    width: 100%; /* Đảm bảo hình ảnh lấp đầy chiều rộng */
+    height: auto; /* Giữ tỷ lệ khung hình */
+    max-height: 500px; /* Đặt chiều cao tối đa để giữ tỷ lệ */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
+}
+
+.custom-hr {
+            border: none; /* Bỏ border mặc định */
+            height: 5px; /* Độ dày của đường kẻ */
+            background-color: #D8CFBC; /* Màu sắc của đường kẻ */
+            width: 7%; /* Chiều dài của đường kẻ */
+            margin: 0px; /* Tạo khoảng cách và căn giữa */
+        }
+
+.custom-hr-center {
+            border: none; /* Bỏ border mặc định */
+            height: 5px; /* Độ dày của đường kẻ */
+            background-color: #D8CFBC; /* Màu sắc của đường kẻ */
+            width: 7%; /* Chiều dài của đường kẻ */
+            margin: 10px auto; /* Tạo khoảng cách và căn giữa */
+        }
+
+.selector {
+    background-image: url("images/"); /* Đường dẫn đến hình ảnh */
+    background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+    background-size: cover; /* Kích thước hình ảnh phủ toàn bộ phần tử */
+    background-attachment: fixed; /* Hình ảnh cố định trong nền khi cuộn */
+    height: 1000px; /* Chiều cao của phần tử */
+}
+
+.gallery {
+            margin: 20px 0;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        .gallery-item img {
+            max-width: 100%;
+			max-height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+.container-fluid .row {
+    margin-bottom: 0; /* Loại bỏ khoảng cách dưới cho hàng */
+}
+
+.container-fluid .col-6 {
+    padding-bottom: 20px; /* Điều chỉnh khoảng cách giữa các hàng hình ảnh */
+}
